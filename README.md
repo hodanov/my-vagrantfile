@@ -5,7 +5,7 @@ This is my Vagrantfile template. the Ubuntu VM will be start that installed the 
 The tools list:
 - Docker
 - Git
-- silversearcher-ag \
+- silversearcher-ag
 - vim
 - tree
 - jq
