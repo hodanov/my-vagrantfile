@@ -16,6 +16,7 @@ Vagrant.configure("2") do |config|
     apt-transport-https \
     ca-certificates \
     curl \
+    gnupg-agent \
     software-properties-common
 
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -26,7 +27,7 @@ Vagrant.configure("2") do |config|
     curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
 
-    echo 'PS1_COLOR_BEGIN="\\[\\e[1;31m\\]"\nPS1_COLOR_END="\\[\\e[m\\]\"\nPS1_HOST_NAME="MyUbuntu"\nexport PS1="${PS1_COLOR_BEGIN}[\\u@\\\${PS1_HOST_NAME} \\W]\${PS1_COLOR_END}\\\\\$ "' >> ~/.bash_profile
-    cp ~/.bash_profile /home/vagrant/.bash_profile
+    cp /vagrant/.bash_profile ~/
+    cp /vagrant/.bash_profile /home/vagrant/
   SHELL
 end
