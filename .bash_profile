@@ -5,3 +5,8 @@ MIDDLE_TRIANGLE="\[\e[0;37m\]"
 END="\[\e[m\]"
 HOST_NAME="MyUbuntu"
 export PS1="${BEGIN} \u@${HOST_NAME} ${BEGIN_TRIANGLE}${MIDDLE} \W ${MIDDLE_TRIANGLE}${END} "
+
+#PS1_COLOR_BEGIN="\[\e[1;31m\]"
+#PS1_COLOR_END="\[\e[m\]"
+#PS1_HOST_NAME="MyUbuntu"
+#export PS1="${PS1_COLOR_BEGIN}[\u@\${PS1_HOST_NAME} \W]${PS1_COLOR_END}\\$ "
